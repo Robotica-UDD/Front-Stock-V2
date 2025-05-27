@@ -1,0 +1,26 @@
+
+<div class="body">
+    <h1 class="title">Stock del Club</h1>
+    <div class="head">
+        
+    <a [routerLink]="['editar']" [queryParams]="{ id: 0, name: '', cantidad:0, precio: '', action:'add' }"><button><h3>Agregar Item</h3></button></a>
+        <div class="filtros">
+            <a class="filtro "href="">Filtros</a>
+            <mat-icon>filter_alt</mat-icon>
+        </div>
+    
+
+    </div>
+    <div class="items" >
+        <div class="item" *ngFor="let item of items">
+            <app-item [itemName]="item.nombreitem" [quantity]="item.cantidad_total" [itemId]="item.iditem" [precio]="item.precio"></app-item>
+        </div>
+        
+    </div>
+    
+    
+    
+</div>
+
+
+

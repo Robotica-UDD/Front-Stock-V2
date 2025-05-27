@@ -1,0 +1,35 @@
+<h1>Editar Item</h1>
+<div class="container">
+    <form (ngSubmit)="submitForm()">
+        <div class="field-container">
+            <mat-form-field class="input">
+                <mat-label>Nombre Item</mat-label>
+                <input matInput [(ngModel)]="itemName" name="itemName" type="text" placeholder="">
+            </mat-form-field>
+        </div>
+        <div class="field-container">
+            <mat-form-field class="input">
+                <mat-label>ID Item</mat-label>
+                <input matInput [(ngModel)]="itemId" name="itemId" type="number" placeholder="">
+            </mat-form-field>
+        </div>
+        <div class="checkbox">
+            <mat-checkbox [(ngModel)]="isAdd" name="isAdd" [disabled]="!isAdd">Agregar Item</mat-checkbox>
+            <mat-checkbox [(ngModel)]="isAdd" name="isRemove" [disabled]="isAdd">Extraer Item</mat-checkbox>
+        </div>
+        <div class="field-container">
+            <mat-form-field class="input">
+                <mat-label>Cantidad</mat-label>
+                <input matInput [(ngModel)]="quantity" name="quantity" type="number" placeholder="">
+            </mat-form-field>
+        </div>
+        <div class="field-container">
+            <mat-form-field class="comentario">
+                <mat-label>Comentario</mat-label>
+                <textarea matInput [(ngModel)]="observation" name="comentario"></textarea>
+            </mat-form-field>
+        </div>
+            <button mat-raised-button type="submit">Actualizar</button>
+        </form>
+    </div>
+    
