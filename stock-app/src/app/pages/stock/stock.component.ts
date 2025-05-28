@@ -24,7 +24,7 @@ export class StockComponent {
   }
   
   loadItems() {
-    this.http.get('https://xatou-vivobook.tailee72e7.ts.net').subscribe(
+    this.http.get('https://xatou-vivobook.tailee72e7.ts.net/item_update').subscribe(
       items => {
         this.items = items;
       },
